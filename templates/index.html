@@ -1,98 +1,825 @@
-{% extends "base.html" %}
-{% block title %}Home{% endblock title %}
-{% block content %}
-<main>
-  <section class="text-center py-5" style="background: linear-gradient(90deg, #181818 60%, #e50914 100%); border-radius: 16px; box-shadow: 0 4px 32px #000a; margin-bottom: 2.5rem;">
-    <h1 style="font-size: 3rem; font-weight: 900; color: #fff; text-shadow: 0 2px 12px #e50914;">Welcome to ModernSite</h1>
-    <p style="font-size: 1.3rem; color: #fff; margin: 1.5rem 0;">Enjoy unlimited movies, TV shows, and more.</p>
-    <a href="#" class="btn btn-danger btn-lg" style="background: #e50914; border: none; font-weight: bold; font-size: 1.2rem;">Get Started</a>
+{% extends "base.html" %} 
+{% block title %}Portfolio
+{% endblock title %} {% block content %}
+<main style="background: #000000; min-height: 100vh; padding: 2rem 0">
+  <!-- Hero Section -->
+  <section
+    class="text-center py-5"
+    style="
+      border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(102, 126, 234, 0.3);
+      margin-bottom: 4rem;
+      position: relative;
+      overflow: hidden;
+    "
+  >
+    <div
+      style="
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(
+          circle,
+          rgba(255, 255, 255, 0.1) 1px,
+          transparent 1px
+        );
+        background-size: 50px 50px;
+        animation: float 20s ease-in-out infinite;
+      "
+    ></div>
+    <div style="position: relative; z-index: 2">
+      <h1
+        style="
+          font-size: 3.5rem;
+          font-weight: 700;
+          color: #fff;
+          text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+          margin-bottom: 1rem;
+        "
+      >
+        Creative Designer
+      </h1>
+      <p
+        style="
+          font-size: 1.4rem;
+          color: rgba(255, 255, 255, 0.9);
+          margin: 1.5rem auto;
+          max-width: 600px;
+          line-height: 1.6;
+        "
+      >
+        Crafting digital experiences that inspire and engage through innovative
+        design solutions.
+      </p>
+      <a
+        href="#"
+        class="btn btn-light btn-lg"
+        style="
+          background: rgba(255, 255, 255, 0.95);
+          color: #667eea;
+          border: none;
+          font-weight: 600;
+          font-size: 1.2rem;
+          padding: 12px 30px;
+          border-radius: 50px;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+          transition: all 0.3s ease;
+        "
+        onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 15px 40px rgba(0,0,0,0.3)'"
+        onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.2)'"
+        >View My Work</a
+      >
+    </div>
   </section>
-  <section style="margin-bottom: 2.5rem;">
-    <h2 style="color: #fff; font-weight: 700; margin-bottom: 1rem;">Trending</h2>
-    <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; padding-bottom: 1rem;">
-      <!-- Trending Movie Card 1 -->
-      <div style="min-width: 220px; background: #232323; border-radius: 12px; box-shadow: 0 2px 12px #000a; padding: 1rem; text-align: center; transition: transform 0.2s; cursor: pointer;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-        <img src="static/img/batman.jpg" alt="Movie Poster" style="width: 100%; border-radius: 8px; margin-bottom: 0.7rem;">
-        <h5 style="color: #fff; font-weight: 600;">Batman</h5>
-        <span style="color: #e50914; font-size: 0.95rem;">Trending</span>
+
+  <!-- Featured Projects Section -->
+  <section style="margin-bottom: 4rem">
+    <div
+      style="
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(
+          circle,
+          rgba(255, 255, 255, 0.1) 1px,
+          transparent 1px
+        );
+        background-size: 50px 50px;
+        animation: float 20s ease-in-out infinite;
+      "
+    ></div>
+    <h2
+      style="
+        color: #ffffff;
+        font-weight: 700;
+        margin-bottom: 2rem;
+        font-size: 2.5rem;
+        text-align: center;
+      "
+    >
+      Featured Projects
+    </h2>
+    <div
+      style="
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        padding-bottom: 1rem;
+        justify-content: center;
+        padding: 0 1rem;
+      "
+    >
+      <!-- Project Card 1 -->
+      <div
+        style="
+          min-width: 280px;
+          max-width: 280px;
+          background: linear-gradient(145deg, #0a0a0a, #1a1a1a);
+          border-radius: 20px;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+          padding: 0;
+          text-align: left;
+          transition: all 0.3s ease;
+          position: relative;
+          overflow: hidden;
+        "
+        onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 50px rgba(0,0,0,0.7)'"
+        onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.5)'"
+      >
+        <div
+          style="
+            height: 180px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            border-radius: 20px 20px 0 0;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          "
+        >
+          <div
+            style="
+              width: 60px;
+              height: 60px;
+              background: rgba(255, 255, 255, 0.2);
+              border-radius: 12px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            "
+          >
+            <i class="bi bi-laptop" style="font-size: 2rem; color: #fff"></i>
+          </div>
+        </div>
+        <div style="padding: 1.5rem">
+          <h6
+            style="
+              color: #ffffff;
+              font-weight: 700;
+              font-size: 1.2rem;
+              margin-bottom: 0.5rem;
+            "
+          >
+            E-Commerce Platform
+          </h6>
+          <p
+            style="
+              color: #aaaaaa;
+              font-size: 0.9rem;
+              line-height: 1.5;
+              margin-bottom: 1rem;
+            "
+          >
+            Modern React-based shopping platform with seamless user experience
+            and payment integration.
+          </p>
+          <span
+            style="
+              background: linear-gradient(45deg, #667eea, #764ba2);
+              color: white;
+              padding: 4px 12px;
+              border-radius: 20px;
+              font-size: 0.8rem;
+              font-weight: 600;
+            "
+            >Web Development</span
+          >
+        </div>
       </div>
-      <!-- Trending Movie Card 2 -->
-      <div style="min-width: 220px; background: #232323; border-radius: 12px; box-shadow: 0 2px 12px #000a; padding: 1rem; text-align: center; transition: transform 0.2s; cursor: pointer;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-        <img src="static/img/movie2.jpg" alt="Movie Poster" style="width: 100%; border-radius: 8px; margin-bottom: 0.7rem;">
-        <h5 style="color: #fff; font-weight: 600;">Movie 2</h5>
-        <span style="color: #e50914; font-size: 0.95rem;">Trending</span>
+
+      <!-- Project Card 2 -->
+      <div
+        style="
+          min-width: 280px;
+          max-width: 280px;
+          background: linear-gradient(145deg, #0a0a0a, #1a1a1a);
+          border-radius: 20px;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+          padding: 0;
+          text-align: left;
+          transition: all 0.3s ease;
+          position: relative;
+          overflow: hidden;
+        "
+        onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 50px rgba(0,0,0,0.7)'"
+        onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.5)'"
+      >
+        <div
+          style="
+            height: 180px;
+            background: linear-gradient(45deg, #f093fb, #f5576c);
+            border-radius: 20px 20px 0 0;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          "
+        >
+          <div
+            style="
+              width: 60px;
+              height: 60px;
+              background: rgba(255, 255, 255, 0.2);
+              border-radius: 12px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            "
+          >
+            <i class="bi bi-phone" style="font-size: 2rem; color: #fff"></i>
+          </div>
+        </div>
+        <div style="padding: 1.5rem">
+          <h6
+            style="
+              color: #ffffff;
+              font-weight: 700;
+              font-size: 1.2rem;
+              margin-bottom: 0.5rem;
+            "
+          >
+            Mobile Banking App
+          </h6>
+          <p
+            style="
+              color: #aaaaaa;
+              font-size: 0.9rem;
+              line-height: 1.5;
+              margin-bottom: 1rem;
+            "
+          >
+            Intuitive mobile banking interface with advanced security features
+            and smooth animations.
+          </p>
+          <span
+            style="
+              background: linear-gradient(45deg, #f093fb, #f5576c);
+              color: white;
+              padding: 4px 12px;
+              border-radius: 20px;
+              font-size: 0.8rem;
+              font-weight: 600;
+            "
+            >Mobile Design</span
+          >
+        </div>
       </div>
-      <!-- Trending Movie Card 3 -->
-      <div style="min-width: 220px; background: #232323; border-radius: 12px; box-shadow: 0 2px 12px #000a; padding: 1rem; text-align: center; transition: transform 0.2s; cursor: pointer;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-        <img src="static/img/movie3.jpg" alt="Movie Poster" style="width: 100%; border-radius: 8px; margin-bottom: 0.7rem;">
-        <h5 style="color: #fff; font-weight: 600;">Movie 3</h5>
-        <span style="color: #e50914; font-size: 0.95rem;">Trending</span>
+
+      <!-- Project Card 3 -->
+      <div
+        style="
+          min-width: 280px;
+          max-width: 280px;
+          background: linear-gradient(145deg, #0a0a0a, #1a1a1a);
+          border-radius: 20px;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+          padding: 0;
+          text-align: left;
+          transition: all 0.3s ease;
+          position: relative;
+          overflow: hidden;
+        "
+        onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 50px rgba(0,0,0,0.7)'"
+        onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.5)'"
+      >
+        <div
+          style="
+            height: 180px;
+            background: linear-gradient(45deg, #4facfe, #00f2fe);
+            border-radius: 20px 20px 0 0;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          "
+        >
+          <div
+            style="
+              width: 60px;
+              height: 60px;
+              background: rgba(255, 255, 255, 0.2);
+              border-radius: 12px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            "
+          >
+            <i class="bi bi-palette" style="font-size: 2rem; color: #fff"></i>
+          </div>
+        </div>
+        <div style="padding: 1.5rem">
+          <h6
+            style="
+              color: #ffffff;
+              font-weight: 700;
+              font-size: 1.2rem;
+              margin-bottom: 0.5rem;
+            "
+          >
+            Brand Identity Design
+          </h6>
+          <p
+            style="
+              color: #aaaaaa;
+              font-size: 0.9rem;
+              line-height: 1.5;
+              margin-bottom: 1rem;
+            "
+          >
+            Complete visual identity system for a tech startup including logo,
+            colors, and guidelines.
+          </p>
+          <span
+            style="
+              background: linear-gradient(45deg, #4facfe, #00f2fe);
+              color: white;
+              padding: 4px 12px;
+              border-radius: 20px;
+              font-size: 0.8rem;
+              font-weight: 600;
+            "
+            >Branding</span
+          >
+        </div>
       </div>
-      <!-- Trending Movie Card 4 -->
-      <div style="min-width: 220px; background: #232323; border-radius: 12px; box-shadow: 0 2px 12px #000a; padding: 1rem; text-align: center; transition: transform 0.2s; cursor: pointer;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-        <img src="static/img/movie4.jpg" alt="Movie Poster" style="width: 100%; border-radius: 8px; margin-bottom: 0.7rem;">
-        <h5 style="color: #fff; font-weight: 600;">Movie 4</h5>
-        <span style="color: #e50914; font-size: 0.95rem;">Trending</span>
-      </div>
-      <!-- Trending Movie Card 5 -->
-      <div style="min-width: 220px; background: #232323; border-radius: 12px; box-shadow: 0 2px 12px #000a; padding: 1rem; text-align: center; transition: transform 0.2s; cursor: pointer;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-        <img src="static/img/movie5.jpg" alt="Movie Poster" style="width: 100%; border-radius: 8px; margin-bottom: 0.7rem;">
-        <h5 style="color: #fff; font-weight: 600;">Movie 5</h5>
-        <span style="color: #e50914; font-size: 0.95rem;">Trending</span>
-      </div>
-      <!-- Trending Movie Card 6 -->
-      <div style="min-width: 220px; background: #232323; border-radius: 12px; box-shadow: 0 2px 12px #000a; padding: 1rem; text-align: center; transition: transform 0.2s; cursor: pointer;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-        <img src="static/img/movie6.jpg" alt="Movie Poster" style="width: 100%; border-radius: 8px; margin-bottom: 0.7rem;">
-        <h5 style="color: #fff; font-weight: 600;">Movie 6</h5>
-        <span style="color: #e50914; font-size: 0.95rem;">Trending</span>
+
+      <!-- Project Card 4 -->
+      <div
+        style="
+          min-width: 280px;
+          max-width: 280px;
+          background: linear-gradient(145deg, #0a0a0a, #1a1a1a);
+          border-radius: 20px;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+          padding: 0;
+          text-align: left;
+          transition: all 0.3s ease;
+          position: relative;
+          overflow: hidden;
+        "
+        onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 50px rgba(0,0,0,0.7)'"
+        onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.5)'"
+      >
+        <div
+          style="
+            height: 180px;
+            background: linear-gradient(45deg, #fa709a, #fee140);
+            border-radius: 20px 20px 0 0;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          "
+        >
+          <div
+            style="
+              width: 60px;
+              height: 60px;
+              background: rgba(255, 255, 255, 0.2);
+              border-radius: 12px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            "
+          >
+            <i class="bi bi-camera" style="font-size: 2rem; color: #fff"></i>
+          </div>
+        </div>
+        <div style="padding: 1.5rem">
+          <h6
+            style="
+              color: #ffffff;
+              font-weight: 700;
+              font-size: 1.2rem;
+              margin-bottom: 0.5rem;
+            "
+          >
+            Photography Portfolio
+          </h6>
+          <p
+            style="
+              color: #cccccc;
+              font-size: 0.9rem;
+              line-height: 1.5;
+              margin-bottom: 1rem;
+            "
+          >
+            Elegant photography showcase website with dynamic galleries and
+            smooth transitions.
+          </p>
+          <span
+            style="
+              background: linear-gradient(45deg, #fa709a, #fee140);
+              color: white;
+              padding: 4px 12px;
+              border-radius: 20px;
+              font-size: 0.8rem;
+              font-weight: 600;
+            "
+            >Photography</span
+          >
+        </div>
       </div>
     </div>
   </section>
-  <section style="margin-bottom: 2.5rem;">
-    <h2 style="color: #fff; font-weight: 700; margin-bottom: 1rem;">Browse by Category</h2>
-    <div style="display: flex; flex-wrap: wrap; gap: 1.5rem;">
-      <div style="flex: 1 1 220px; background: #232323; border-radius: 12px; box-shadow: 0 2px 12px #000a; padding: 1.5rem; text-align: center; min-width: 220px; transition: box-shadow 0.2s;" onmouseover="this.style.boxShadow='0 4px 24px #e5091444'" onmouseout="this.style.boxShadow='0 2px 12px #000a'">
-        <i class="bi bi-film" style="font-size: 2.5rem; color: #e50914;"></i>
-        <h5 style="color: #fff; font-weight: 600; margin-top: 1rem;">Action</h5>
-        <p style="color: #bbb; font-size: 1rem;">Explore the best Action movies and shows.</p>
-        <a href="#" class="btn btn-outline-danger btn-sm" style="border-radius: 20px;">View More</a>
+
+  <!-- Skills Section -->
+  <section style="margin-bottom: 4rem">
+    <h2
+      style="
+        color: #ffffff;
+        font-weight: 700;
+        margin-bottom: 2rem;
+        font-size: 2.5rem;
+        text-align: center;
+      "
+    >
+      Skills & Expertise
+    </h2>
+    s
+    <div
+      style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center"
+    >
+      <!-- Skill Card 1 -->
+      <div
+        style="
+          flex: 1 1 300px;
+          max-width: 350px;
+          background: linear-gradient(145deg, #0a0a0a, #1a1a1a);
+          border-radius: 20px;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+          padding: 2rem;
+          text-align: center;
+          position: relative;
+          overflow: hidden;
+          transition: all 0.3s ease;
+        "
+        onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 20px 50px rgba(102, 126, 234, 0.15)'"
+        onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.5)'"
+      >
+        <div
+          style="
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+          "
+        >
+          <i
+            class="bi bi-code-slash"
+            style="font-size: 2.5rem; color: #fff"
+          ></i>
+        </div>
+        <h5
+          style="
+            color: #ffffff;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+          "
+        >
+          Frontend Development
+        </h5>
+        <p
+          style="
+            color: #aaaaaa;
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+          "
+        >
+          Creating responsive and interactive user interfaces with modern
+          frameworks and clean code.
+        </p>
+        <div
+          style="
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: center;
+          "
+        >
+          <span
+            style="
+              background: rgba(102, 126, 234, 0.1);
+              color: #667eea;
+              padding: 6px 12px;
+              border-radius: 15px;
+              font-size: 0.85rem;
+              font-weight: 600;
+            "
+            >React</span
+          >
+          <span
+            style="
+              background: rgba(102, 126, 234, 0.1);
+              color: #667eea;
+              padding: 6px 12px;
+              border-radius: 15px;
+              font-size: 0.85rem;
+              font-weight: 600;
+            "
+            >Vue.js</span
+          >
+          <span
+            style="
+              background: rgba(102, 126, 234, 0.1);
+              color: #667eea;
+              padding: 6px 12px;
+              border-radius: 15px;
+              font-size: 0.85rem;
+              font-weight: 600;
+            "
+            >TypeScript</span
+          >
+        </div>
       </div>
-      <div style="flex: 1 1 220px; background: #232323; border-radius: 12px; box-shadow: 0 2px 12px #000a; padding: 1.5rem; text-align: center; min-width: 220px; transition: box-shadow 0.2s;" onmouseover="this.style.boxShadow='0 4px 24px #e5091444'" onmouseout="this.style.boxShadow='0 2px 12px #000a'">
-        <i class="bi bi-film" style="font-size: 2.5rem; color: #e50914;"></i>
-        <h5 style="color: #fff; font-weight: 600; margin-top: 1rem;">Comedy</h5>
-        <p style="color: #bbb; font-size: 1rem;">Explore the best Comedy movies and shows.</p>
-        <a href="#" class="btn btn-outline-danger btn-sm" style="border-radius: 20px;">View More</a>
+
+      <!-- Skill Card 2 -->
+      <div
+        style="
+          flex: 1 1 300px;
+          max-width: 350px;
+          background: linear-gradient(145deg, #0a0a0a, #1a1a1a);
+          border-radius: 20px;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+          padding: 2rem;
+          text-align: center;
+          position: relative;
+          overflow: hidden;
+          transition: all 0.3s ease;
+        "
+        onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 20px 50px rgba(240, 147, 251, 0.15)'"
+        onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.5)'"
+      >
+        <div
+          style="
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(45deg, #f093fb, #f5576c);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+          "
+        >
+          <i class="bi bi-brush" style="font-size: 2.5rem; color: #fff"></i>
+        </div>
+        <h5
+          style="
+            color: #ffffff;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+          "
+        >
+          UI/UX Design
+        </h5>
+        <p
+          style="
+            color: #aaaaaa;
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+          "
+        >
+          Designing user-centered digital experiences that are both beautiful
+          and functional.
+        </p>
+        <div
+          style="
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: center;
+          "
+        >
+          <span
+            style="
+              background: rgba(240, 147, 251, 0.1);
+              color: #f093fb;
+              padding: 6px 12px;
+              border-radius: 15px;
+              font-size: 0.85rem;
+              font-weight: 600;
+            "
+            >Figma</span
+          >
+          <span
+            style="
+              background: rgba(240, 147, 251, 0.1);
+              color: #f093fb;
+              padding: 6px 12px;
+              border-radius: 15px;
+              font-size: 0.85rem;
+              font-weight: 600;
+            "
+            >Adobe XD</span
+          >
+          <span
+            style="
+              background: rgba(240, 147, 251, 0.1);
+              color: #f093fb;
+              padding: 6px 12px;
+              border-radius: 15px;
+              font-size: 0.85rem;
+              font-weight: 600;
+            "
+            >Prototyping</span
+          >
+        </div>
       </div>
-      <div style="flex: 1 1 220px; background: #232323; border-radius: 12px; box-shadow: 0 2px 12px #000a; padding: 1.5rem; text-align: center; min-width: 220px; transition: box-shadow 0.2s;" onmouseover="this.style.boxShadow='0 4px 24px #e5091444'" onmouseout="this.style.boxShadow='0 2px 12px #000a'">
-        <i class="bi bi-film" style="font-size: 2.5rem; color: #e50914;"></i>
-        <h5 style="color: #fff; font-weight: 600; margin-top: 1rem;">Drama</h5>
-        <p style="color: #bbb; font-size: 1rem;">Explore the best Drama movies and shows.</p>
-        <a href="#" class="btn btn-outline-danger btn-sm" style="border-radius: 20px;">View More</a>
-      </div>
-      <div style="flex: 1 1 220px; background: #232323; border-radius: 12px; box-shadow: 0 2px 12px #000a; padding: 1.5rem; text-align: center; min-width: 220px; transition: box-shadow 0.2s;" onmouseover="this.style.boxShadow='0 4px 24px #e5091444'" onmouseout="this.style.boxShadow='0 2px 12px #000a'">
-        <i class="bi bi-film" style="font-size: 2.5rem; color: #e50914;"></i>
-        <h5 style="color: #fff; font-weight: 600; margin-top: 1rem;">Horror</h5>
-        <p style="color: #bbb; font-size: 1rem;">Explore the best Horror movies and shows.</p>
-        <a href="#" class="btn btn-outline-danger btn-sm" style="border-radius: 20px;">View More</a>
-      </div>
-      <div style="flex: 1 1 220px; background: #232323; border-radius: 12px; box-shadow: 0 2px 12px #000a; padding: 1.5rem; text-align: center; min-width: 220px; transition: box-shadow 0.2s;" onmouseover="this.style.boxShadow='0 4px 24px #e5091444'" onmouseout="this.style.boxShadow='0 2px 12px #000a'">
-        <i class="bi bi-film" style="font-size: 2.5rem; color: #e50914;"></i>
-        <h5 style="color: #fff; font-weight: 600; margin-top: 1rem;">Sci-Fi</h5>
-        <p style="color: #bbb; font-size: 1rem;">Explore the best Sci-Fi movies and shows.</p>
-        <a href="#" class="btn btn-outline-danger btn-sm" style="border-radius: 20px;">View More</a>
-      </div>
-      <div style="flex: 1 1 220px; background: #232323; border-radius: 12px; box-shadow: 0 2px 12px #000a; padding: 1.5rem; text-align: center; min-width: 220px; transition: box-shadow 0.2s;" onmouseover="this.style.boxShadow='0 4px 24px #e5091444'" onmouseout="this.style.boxShadow='0 2px 12px #000a'">
-        <i class="bi bi-film" style="font-size: 2.5rem; color: #e50914;"></i>
-        <h5 style="color: #fff; font-weight: 600; margin-top: 1rem;">Documentary</h5>
-        <p style="color: #bbb; font-size: 1rem;">Explore the best Documentary movies and shows.</p>
-        <a href="#" class="btn btn-outline-danger btn-sm" style="border-radius: 20px;">View More</a>
+
+      <!-- Skill Card 3 -->
+      <div
+        style="
+          flex: 1 1 300px;
+          max-width: 350px;
+          background: linear-gradient(145deg, #0a0a0a, #1a1a1a);
+          border-radius: 20px;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+          padding: 2rem;
+          text-align: center;
+          position: relative;
+          overflow: hidden;
+          transition: all 0.3s ease;
+        "
+        onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 20px 50px rgba(79, 172, 254, 0.15)'"
+        onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.5)'"
+      >
+        <div
+          style="
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(45deg, #4facfe, #00f2fe);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+          "
+        >
+          <i class="bi bi-graph-up" style="font-size: 2.5rem; color: #fff"></i>
+        </div>
+        <h5
+          style="
+            color: #ffffff;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+          "
+        >
+          Digital Marketing
+        </h5>
+        <p
+          style="
+            color: #aaaaaa;
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+          "
+        >
+          Strategic digital marketing campaigns that drive engagement and
+          measurable results.
+        </p>
+        <div
+          style="
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: center;
+          "
+        >
+          <span
+            style="
+              background: rgba(79, 172, 254, 0.1);
+              color: #4facfe;
+              padding: 6px 12px;
+              border-radius: 15px;
+              font-size: 0.85rem;
+              font-weight: 600;
+            "
+            >SEO</span
+          >
+          <span
+            style="
+              background: rgba(79, 172, 254, 0.1);
+              color: #4facfe;
+              padding: 6px 12px;
+              border-radius: 15px;
+              font-size: 0.85rem;
+              font-weight: 600;
+            "
+            >Analytics</span
+          >
+          <span
+            style="
+              background: rgba(79, 172, 254, 0.1);
+              color: #4facfe;
+              padding: 6px 12px;
+              border-radius: 15px;
+              font-size: 0.85rem;
+              font-weight: 600;
+            "
+            >Social Media</span
+          >
+        </div>
       </div>
     </div>
   </section>
-  <section style="background: #e50914; border-radius: 12px; padding: 2rem; text-align: center; box-shadow: 0 2px 12px #000a;">
-    <h2 style="color: #fff; font-weight: 800; margin-bottom: 1rem;">Ready to watch?</h2>
-    <p style="color: #fff; font-size: 1.2rem; margin-bottom: 1.5rem;">Sign up now and start your free month.</p>
-    <a href="#" class="btn btn-light btn-lg" style="color: #e50914; font-weight: bold; font-size: 1.1rem;">Join Now</a>
+
+  <!-- Call to Action Section -->
+  <section
+    style="
+      border-radius: 25px;
+      padding: 3rem 2rem;
+      text-align: center;
+      box-shadow: 0 20px 60px rgba(102, 126, 234, 0.25);
+      position: relative;
+      overflow: hidden;
+    "
+  >
+    <div
+      style="
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(
+          circle,
+          rgba(255, 255, 255, 0.1) 1px,
+          transparent 1px
+        );
+        background-size: 50px 50px;
+        animation: float 20s ease-in-out infinite;
+      "
+    ></div>
+    <div style="position: relative; z-index: 2">
+      <h2
+        style="
+          color: #fff;
+          font-weight: 800;
+          margin-bottom: 1rem;
+          font-size: 2.5rem;
+        "
+      >
+        Let's Create Something Amazing
+      </h2>
+      <p
+        style="
+          color: rgba(255, 255, 255, 0.9);
+          font-size: 1.3rem;
+          margin-bottom: 2rem;
+          max-width: 600px;
+          margin-left: auto;
+          margin-right: auto;
+          line-height: 1.6;
+        "
+      >
+        Ready to bring your ideas to life? Let's collaborate and build something
+        extraordinary together.
+      </p>
+      <a
+        href="#"
+        class="btn btn-light btn-lg"
+        style="
+          background: rgba(255, 255, 255, 0.95);
+          color: #667eea;
+          border: none;
+          font-weight: 700;
+          font-size: 1.2rem;
+          padding: 15px 40px;
+          border-radius: 50px;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+          transition: all 0.3s ease;
+        "
+        onmouseover="this.style.transform='translateY(-3px) scale(1.05)'; this.style.boxShadow='0 15px 40px rgba(0,0,0,0.3)'"
+        onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.2)'"
+        >Get In Touch</a
+      >
+    </div>
   </section>
 </main>
+
+<style>
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-20px) rotate(180deg);
+    }
+  }
+</style>
 {% endblock content %}

@@ -1,24 +1,1025 @@
+<!-- prettier-ignore-start -->
 {% extends "base.html" %}
+{% load static %}
 {% block title %}About{% endblock title %}
 {% block content %}
-<main class="py-5">
-  <section class="text-center" style="max-width: 700px; margin: auto;">
-    <h1 style="color: #e50914; font-weight: 900;">About ModernSite</h1>
-    <p style="color: #bbb; font-size: 1.2rem; margin: 2rem 0;">ModernSite is a demo web application inspired by Netflix, built to showcase modern UI, interactive features, and a clean dark theme. It uses Django, Bootstrap, and custom styles for a beautiful experience.</p>
-    <div class="d-flex justify-content-center gap-4 mt-4">
-      <div>
-        <i class="bi bi-lightning" style="font-size: 2.5rem; color: #e50914;"></i>
-        <p style="color: #fff;">Fast & Responsive</p>
+<!-- prettier-ignore-end -->
+<main
+  style="
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%);
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+  "
+>
+  <!-- Floating Icons Animation -->
+  <div>
+    style="
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+    "
+  >
+    <i
+      class="bi bi-code-slash"
+      style="
+        position: absolute;
+        top: 15%;
+        left: 10%;
+        font-size: 2rem;
+        color: rgba(138, 43, 226, 0.3);
+        animation: floatIcon 6s ease-in-out infinite;
+      "
+    ></i>
+    <i
+      class="bi bi-palette"
+      style="
+        position: absolute;
+        top: 25%;
+        right: 15%;
+        font-size: 1.5rem;
+        color: rgba(79, 172, 254, 0.3);
+        animation: floatIcon 8s ease-in-out infinite reverse;
+      "
+    ></i>
+    <i
+      class="bi bi-lightbulb"
+      style="
+        position: absolute;
+        top: 45%;
+        left: 8%;
+        font-size: 1.8rem;
+        color: rgba(240, 147, 251, 0.3);
+        animation: floatIcon 7s ease-in-out infinite;
+      "
+    ></i>
+    <i
+      class="bi bi-heart"
+      style="
+        position: absolute;
+        top: 65%;
+        right: 12%;
+        font-size: 1.3rem;
+        color: rgba(245, 87, 108, 0.3);
+        animation: floatIcon 9s ease-in-out infinite reverse;
+      "
+    ></i>
+    <i
+      class="bi bi-star"
+      style="
+        position: absolute;
+        top: 80%;
+        left: 20%;
+        font-size: 1.6rem;
+        color: rgba(102, 126, 234, 0.3);
+        animation: floatIcon 5s ease-in-out infinite;
+      "
+    ></i>
+    <i
+      class="bi bi-trophy"
+      style="
+        position: absolute;
+        top: 35%;
+        left: 85%;
+        font-size: 1.4rem;
+        color: rgba(79, 172, 254, 0.3);
+        animation: floatIcon 6.5s ease-in-out infinite reverse;
+      "
+    ></i>
+  </div>
+
+  <!-- Hero Section -->
+  <section
+    style="
+      padding: 120px 0 60px;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    "
+  >
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem">
+      <h1
+        style="
+          font-size: 4rem;
+          font-weight: 900;
+          color: #ffffff;
+          margin-bottom: 1.5rem;
+          background: linear-gradient(45deg, #8a2be2, #4169e1);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        "
+      >
+        About Our Studio
+      </h1>
+      <p
+        style="
+          color: #aaaaaa;
+          font-size: 1.4rem;
+          line-height: 1.8;
+          max-width: 800px;
+          margin: 0 auto 3rem;
+          font-weight: 300;
+        "
+      >
+        Crafting digital experiences that inspire, engage, and transform
+        businesses through innovative design and cutting-edge technology.
+      </p>
+
+      <!-- Profile Image -->
+      <div
+        style="
+          width: 200px;
+          height: 200px;
+          margin: 0 auto 3rem;
+          border-radius: 50%;
+          overflow: hidden;
+          border: 4px solid transparent;
+          background: linear-gradient(45deg, #8a2be2, #4169e1);
+          padding: 4px;
+          transition: all 0.3s ease;
+        "
+        onmouseover="this.style.transform='scale(1.1) rotate(5deg)'; this.style.boxShadow='0 20px 50px rgba(138, 43, 226, 0.4)'"
+        onmouseout="this.style.transform='scale(1) rotate(0deg)'; this.style.boxShadow='none'"
+      >
+        <img
+          src="{% static 'img/will_smith.jpg' %}"
+          alt="Studio Profile"
+          style="
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+          "
+        />
       </div>
-      <div>
-        <i class="bi bi-palette" style="font-size: 2.5rem; color: #e50914;"></i>
-        <p style="color: #fff;">Modern Design</p>
+    </div>
+  </section>
+
+  <!-- Story Section -->
+  <section
+    style="
+      padding: 80px 0;
+      background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+      position: relative;
+    "
+  >
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem">
+      <div
+        style="
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 4rem;
+          align-items: center;
+        "
+      >
+        <div style="order: 1">
+          <h2
+            style="
+              font-size: 2.8rem;
+              font-weight: 800;
+              color: #ffffff;
+              margin-bottom: 2rem;
+              background: linear-gradient(45deg, #667eea, #764ba2);
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+              background-clip: text;
+            "
+          >
+            Our Journey
+          </h2>
+          <p
+            style="
+              color: #aaaaaa;
+              font-size: 1.1rem;
+              line-height: 1.8;
+              margin-bottom: 1.5rem;
+            "
+          >
+            Founded in 2020, our studio began as a passion project between two
+            designers who believed that great design could change the world.
+            What started in a small coffee shop has grown into a full-service
+            digital agency.
+          </p>
+          <p
+            style="
+              color: #aaaaaa;
+              font-size: 1.1rem;
+              line-height: 1.8;
+              margin-bottom: 1.5rem;
+            "
+          >
+            We've had the privilege of working with startups, Fortune 500
+            companies, and everything in between. Our approach combines
+            strategic thinking with creative execution to deliver results that
+            exceed expectations.
+          </p>
+          <p
+            style="
+              color: #aaaaaa;
+              font-size: 1.1rem;
+              line-height: 1.8;
+              margin-bottom: 2rem;
+            "
+          >
+            Today, we're a team of 15+ creatives, developers, and strategists
+            united by our love for innovation and commitment to excellence.
+          </p>
+
+          <!-- Stats -->
+          <div
+            style="
+              display: grid;
+              grid-template-columns: repeat(3, 1fr);
+              gap: 1.5rem;
+              margin-top: 2rem;
+            "
+          >
+            <div
+              style="
+                text-align: center;
+                padding: 1rem;
+                background: linear-gradient(145deg, #0a0a0a, #1a1a1a);
+                border-radius: 15px;
+                transition: all 0.3s ease;
+              "
+              onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 15px 30px rgba(0,0,0,0.7)'"
+              onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'"
+            >
+              <h3
+                style="
+                  color: #8a2be2;
+                  font-size: 2.5rem;
+                  font-weight: 900;
+                  margin-bottom: 0.5rem;
+                "
+              >
+                150+
+              </h3>
+              <p style="color: #aaaaaa; font-size: 0.9rem; font-weight: 600">
+                Projects Completed
+              </p>
+            </div>
+            <div
+              style="
+                text-align: center;
+                padding: 1rem;
+                background: linear-gradient(145deg, #0a0a0a, #1a1a1a);
+                border-radius: 15px;
+                transition: all 0.3s ease;
+              "
+              onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 15px 30px rgba(0,0,0,0.7)'"
+              onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'"
+            >
+              <h3
+                style="
+                  color: #4169e1;
+                  font-size: 2.5rem;
+                  font-weight: 900;
+                  margin-bottom: 0.5rem;
+                "
+              >
+                50+
+              </h3>
+              <p style="color: #aaaaaa; font-size: 0.9rem; font-weight: 600">
+                Happy Clients
+              </p>
+            </div>
+            <div
+              style="
+                text-align: center;
+                padding: 1rem;
+                background: linear-gradient(145deg, #0a0a0a, #1a1a1a);
+                border-radius: 15px;
+                transition: all 0.3s ease;
+              "
+              onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 15px 30px rgba(0,0,0,0.7)'"
+              onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'"
+            >
+              <h3
+                style="
+                  color: #f093fb;
+                  font-size: 2.5rem;
+                  font-weight: 900;
+                  margin-bottom: 0.5rem;
+                "
+              >
+                5
+              </h3>
+              <p style="color: #aaaaaa; font-size: 0.9rem; font-weight: 600">
+                Years Experience
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div style="order: 2; position: relative">
+          <div
+            style="
+              border-radius: 20px;
+              overflow: hidden;
+              transition: all 0.3s ease;
+            "
+            onmouseover="this.style.transform='scale(1.05) rotate(2deg)'; this.style.boxShadow='0 25px 50px rgba(0,0,0,0.8)'"
+            onmouseout="this.style.transform='scale(1) rotate(0deg)'; this.style.boxShadow='0 15px 30px rgba(0,0,0,0.5)'"
+          >
+            <img
+              src="{% static 'img/batman.jpg' %}"
+              alt="Our Studio"
+              style="width: 100%; height: 400px; object-fit: cover"
+            />
+          </div>
+        </div>
       </div>
-      <div>
-        <i class="bi bi-people" style="font-size: 2.5rem; color: #e50914;"></i>
-        <p style="color: #fff;">User Friendly</p>
+    </div>
+  </section>
+
+  <!-- Values Section -->
+  <section style="padding: 80px 0; position: relative">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem">
+      <h2
+        style="
+          text-align: center;
+          font-size: 3rem;
+          font-weight: 800;
+          color: #ffffff;
+          margin-bottom: 4rem;
+          background: linear-gradient(45deg, #4facfe, #00f2fe);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+        "
+      >
+        Our Core Values
+      </h2>
+
+      <div
+        style="
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 2rem;
+        "
+      >
+        <!-- Value 1 -->
+        <div
+          style="
+            background: linear-gradient(145deg, #0a0a0a, #1a1a1a);
+            border-radius: 20px;
+            padding: 2.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+          "
+          onmouseover="this.style.transform='translateY(-10px) rotate(1deg)'; this.style.boxShadow='0 25px 50px rgba(138, 43, 226, 0.2)'"
+          onmouseout="this.style.transform='translateY(0) rotate(0deg)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.5)'"
+        >
+          <div
+            style="
+              width: 80px;
+              height: 80px;
+              background: linear-gradient(45deg, #8a2be2, #4169e1);
+              border-radius: 20px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin: 0 auto 1.5rem;
+            "
+          >
+            <i
+              class="bi bi-lightbulb"
+              style="font-size: 2.5rem; color: #fff"
+            ></i>
+          </div>
+          <h3
+            style="
+              color: #ffffff;
+              font-weight: 700;
+              margin-bottom: 1rem;
+              font-size: 1.4rem;
+            "
+          >
+            Innovation
+          </h3>
+          <p style="color: #aaaaaa; font-size: 1rem; line-height: 1.6">
+            We push boundaries and explore new possibilities to create solutions
+            that stand out in a crowded digital landscape.
+          </p>
+        </div>
+
+        <!-- Value 2 -->
+        <div
+          style="
+            background: linear-gradient(145deg, #0a0a0a, #1a1a1a);
+            border-radius: 20px;
+            padding: 2.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+          "
+          onmouseover="this.style.transform='translateY(-10px) rotate(-1deg)'; this.style.boxShadow='0 25px 50px rgba(79, 172, 254, 0.2)'"
+          onmouseout="this.style.transform='translateY(0) rotate(0deg)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.5)'"
+        >
+          <div
+            style="
+              width: 80px;
+              height: 80px;
+              background: linear-gradient(45deg, #4facfe, #00f2fe);
+              border-radius: 20px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin: 0 auto 1.5rem;
+            "
+          >
+            <i class="bi bi-people" style="font-size: 2.5rem; color: #fff"></i>
+          </div>
+          <h3
+            style="
+              color: #ffffff;
+              font-weight: 700;
+              margin-bottom: 1rem;
+              font-size: 1.4rem;
+            "
+          >
+            Collaboration
+          </h3>
+          <p style="color: #aaaaaa; font-size: 1rem; line-height: 1.6">
+            We believe the best work comes from diverse perspectives working
+            together towards a common goal.
+          </p>
+        </div>
+
+        <!-- Value 3 -->
+        <div
+          style="
+            background: linear-gradient(145deg, #0a0a0a, #1a1a1a);
+            border-radius: 20px;
+            padding: 2.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+          "
+          onmouseover="this.style.transform='translateY(-10px) rotate(1deg)'; this.style.boxShadow='0 25px 50px rgba(240, 147, 251, 0.2)'"
+          onmouseout="this.style.transform='translateY(0) rotate(0deg)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.5)'"
+        >
+          <div
+            style="
+              width: 80px;
+              height: 80px;
+              background: linear-gradient(45deg, #f093fb, #f5576c);
+              border-radius: 20px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin: 0 auto 1.5rem;
+            "
+          >
+            <i class="bi bi-award" style="font-size: 2.5rem; color: #fff"></i>
+          </div>
+          <h3
+            style="
+              color: #ffffff;
+              font-weight: 700;
+              margin-bottom: 1rem;
+              font-size: 1.4rem;
+            "
+          >
+            Excellence
+          </h3>
+          <p style="color: #aaaaaa; font-size: 1rem; line-height: 1.6">
+            We are committed to delivering the highest quality work that exceeds
+            expectations and drives real results.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section
+    style="
+      padding: 80px 0;
+      background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+      position: relative;
+    "
+  >
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem">
+      <h2
+        style="
+          text-align: center;
+          font-size: 3rem;
+          font-weight: 800;
+          color: #ffffff;
+          margin-bottom: 4rem;
+          background: linear-gradient(45deg, #667eea, #764ba2);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+        "
+      >
+        Our Process
+      </h2>
+
+      <div
+        style="
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 4rem;
+          align-items: center;
+          margin-bottom: 4rem;
+        "
+      >
+        <div style="position: relative">
+          <div
+            style="
+              border-radius: 20px;
+              overflow: hidden;
+              transition: all 0.3s ease;
+            "
+            onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 25px 50px rgba(0,0,0,0.8)'"
+            onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 15px 30px rgba(0,0,0,0.5)'"
+          >
+            <img
+              src="{% static 'img/interstellar.jpg' %}"
+              alt="Research & Strategy"
+              style="width: 100%; height: 350px; object-fit: cover"
+            />
+          </div>
+        </div>
+
+        <div>
+          <h3
+            style="
+              font-size: 2.2rem;
+              font-weight: 700;
+              color: #ffffff;
+              margin-bottom: 1.5rem;
+            "
+          >
+            1. Research & Strategy
+          </h3>
+          <p
+            style="
+              color: #aaaaaa;
+              font-size: 1.1rem;
+              line-height: 1.8;
+              margin-bottom: 1.5rem;
+            "
+          >
+            We start every project by diving deep into your business,
+            understanding your audience, and analyzing your competition. This
+            research phase is crucial for developing a strategy that delivers
+            measurable results.
+          </p>
+          <p
+            style="
+              color: #aaaaaa;
+              font-size: 1.1rem;
+              line-height: 1.8;
+              margin-bottom: 1.5rem;
+            "
+          >
+            Our team conducts user interviews, market analysis, and competitive
+            audits to ensure we're building solutions that truly resonate with
+            your target audience.
+          </p>
+          <div style="display: flex; gap: 1rem; margin-top: 2rem">
+            <span
+              style="
+                background: rgba(138, 43, 226, 0.2);
+                color: #8a2be2;
+                padding: 8px 16px;
+                border-radius: 20px;
+                font-size: 0.9rem;
+                font-weight: 600;
+              "
+              >User Research</span
+            >
+            <span
+              style="
+                background: rgba(138, 43, 226, 0.2);
+                color: #8a2be2;
+                padding: 8px 16px;
+                border-radius: 20px;
+                font-size: 0.9rem;
+                font-weight: 600;
+              "
+              >Market Analysis</span
+            >
+          </div>
+        </div>
+      </div>
+
+      <div
+        style="
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 4rem;
+          align-items: center;
+          margin-bottom: 4rem;
+        "
+      >
+        <div style="order: 2">
+          <h3
+            style="
+              font-size: 2.2rem;
+              font-weight: 700;
+              color: #ffffff;
+              margin-bottom: 1.5rem;
+            "
+          >
+            2. Design & Prototype
+          </h3>
+          <p
+            style="
+              color: #aaaaaa;
+              font-size: 1.1rem;
+              line-height: 1.8;
+              margin-bottom: 1.5rem;
+            "
+          >
+            With strategy in hand, our designers create wireframes, mockups, and
+            interactive prototypes. We focus on user experience, ensuring every
+            interaction feels intuitive and purposeful.
+          </p>
+          <p
+            style="
+              color: #aaaaaa;
+              font-size: 1.1rem;
+              line-height: 1.8;
+              margin-bottom: 1.5rem;
+            "
+          >
+            Our design process is iterative and collaborative, with regular
+            feedback sessions to ensure we're always aligned with your vision
+            and goals.
+          </p>
+          <div style="display: flex; gap: 1rem; margin-top: 2rem">
+            <span
+              style="
+                background: rgba(79, 172, 254, 0.2);
+                color: #4facfe;
+                padding: 8px 16px;
+                border-radius: 20px;
+                font-size: 0.9rem;
+                font-weight: 600;
+              "
+              >Wireframing</span
+            >
+            <span
+              style="
+                background: rgba(79, 172, 254, 0.2);
+                color: #4facfe;
+                padding: 8px 16px;
+                border-radius: 20px;
+                font-size: 0.9rem;
+                font-weight: 600;
+              "
+              >Prototyping</span
+            >
+          </div>
+        </div>
+
+        <div style="order: 1; position: relative">
+          <div
+            style="
+              border-radius: 20px;
+              overflow: hidden;
+              transition: all 0.3s ease;
+            "
+            onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 25px 50px rgba(0,0,0,0.8)'"
+            onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 15px 30px rgba(0,0,0,0.5)'"
+          >
+            <img
+              src="{% static 'img/lords.jpg' %}"
+              alt="Design & Prototype"
+              style="width: 100%; height: 350px; object-fit: cover"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div
+        style="
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 4rem;
+          align-items: center;
+        "
+      >
+        <div style="position: relative">
+          <div
+            style="
+              border-radius: 20px;
+              overflow: hidden;
+              transition: all 0.3s ease;
+            "
+            onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 25px 50px rgba(0,0,0,0.8)'"
+            onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 15px 30px rgba(0,0,0,0.5)'"
+          >
+            <img
+              src="{% static 'img/starwars.jpg' %}"
+              alt="Development & Launch"
+              style="width: 100%; height: 350px; object-fit: cover"
+            />
+          </div>
+        </div>
+
+        <div>
+          <h3
+            style="
+              font-size: 2.2rem;
+              font-weight: 700;
+              color: #ffffff;
+              margin-bottom: 1.5rem;
+            "
+          >
+            3. Development & Launch
+          </h3>
+          <p
+            style="
+              color: #aaaaaa;
+              font-size: 1.1rem;
+              line-height: 1.8;
+              margin-bottom: 1.5rem;
+            "
+          >
+            Our developers bring designs to life using the latest technologies
+            and best practices. We build scalable, secure, and performant
+            solutions that grow with your business.
+          </p>
+          <p
+            style="
+              color: #aaaaaa;
+              font-size: 1.1rem;
+              line-height: 1.8;
+              margin-bottom: 1.5rem;
+            "
+          >
+            Before launch, we conduct thorough testing across devices and
+            browsers, ensuring your product delivers a flawless experience to
+            every user.
+          </p>
+          <div style="display: flex; gap: 1rem; margin-top: 2rem">
+            <span
+              style="
+                background: rgba(240, 147, 251, 0.2);
+                color: #f093fb;
+                padding: 8px 16px;
+                border-radius: 20px;
+                font-size: 0.9rem;
+                font-weight: 600;
+              "
+              >Development</span
+            >
+            <span
+              style="
+                background: rgba(240, 147, 251, 0.2);
+                color: #f093fb;
+                padding: 8px 16px;
+                border-radius: 20px;
+                font-size: 0.9rem;
+                font-weight: 600;
+              "
+              >Testing</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section style="padding: 80px 0; position: relative">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem">
+      <h2
+        style="
+          text-align: center;
+          font-size: 3rem;
+          font-weight: 800;
+          color: #ffffff;
+          margin-bottom: 4rem;
+          background: linear-gradient(45deg, #f093fb, #f5576c);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+        "
+      >
+        Meet Our Team
+      </h2>
+
+      <div
+        style="
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+          gap: 2rem;
+        "
+      >
+        <!-- Team Member 1 -->
+        <div
+          style="
+            background: linear-gradient(145deg, #0a0a0a, #1a1a1a);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+          "
+          onmouseover="this.style.transform='translateY(-10px) rotate(2deg)'; this.style.boxShadow='0 25px 50px rgba(0,0,0,0.8)'"
+          onmouseout="this.style.transform='translateY(0) rotate(0deg)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.5)'"
+        >
+          <div
+            style="
+              width: 120px;
+              height: 120px;
+              border-radius: 50%;
+              overflow: hidden;
+              margin: 0 auto 1.5rem;
+              border: 3px solid transparent;
+              background: linear-gradient(45deg, #8a2be2, #4169e1);
+              padding: 3px;
+            "
+          >
+            <img
+              src="{% static 'img/will_smith.jpg' %}"
+              alt="Creative Director"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 50%;
+              "
+            />
+          </div>
+          <h4
+            style="
+              color: #ffffff;
+              font-weight: 700;
+              margin-bottom: 0.5rem;
+              font-size: 1.3rem;
+            "
+          >
+            Alex Johnson
+          </h4>
+          <p
+            style="
+              color: #8a2be2;
+              font-size: 1rem;
+              font-weight: 600;
+              margin-bottom: 1rem;
+            "
+          >
+            Creative Director
+          </p>
+          <p style="color: #aaaaaa; font-size: 0.9rem; line-height: 1.6">
+            Leading creative vision and ensuring every project tells a
+            compelling story through design.
+          </p>
+        </div>
+
+        <!-- Team Member 2 -->
+        <div
+          style="
+            background: linear-gradient(145deg, #0a0a0a, #1a1a1a);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+          "
+          onmouseover="this.style.transform='translateY(-10px) rotate(-2deg)'; this.style.boxShadow='0 25px 50px rgba(0,0,0,0.8)'"
+          onmouseout="this.style.transform='translateY(0) rotate(0deg)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.5)'"
+        >
+          <div
+            style="
+              width: 120px;
+              height: 120px;
+              border-radius: 50%;
+              overflow: hidden;
+              margin: 0 auto 1.5rem;
+              border: 3px solid transparent;
+              background: linear-gradient(45deg, #4facfe, #00f2fe);
+              padding: 3px;
+            "
+          >
+            <img
+              src="{% static 'img/batman.jpg' %}"
+              alt="Lead Developer"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 50%;
+              "
+            />
+          </div>
+          <h4
+            style="
+              color: #ffffff;
+              font-weight: 700;
+              margin-bottom: 0.5rem;
+              font-size: 1.3rem;
+            "
+          >
+            Sarah Chen
+          </h4>
+          <p
+            style="
+              color: #4facfe;
+              font-size: 1rem;
+              font-weight: 600;
+              margin-bottom: 1rem;
+            "
+          >
+            Lead Developer
+          </p>
+          <p style="color: #aaaaaa; font-size: 0.9rem; line-height: 1.6">
+            Architecting robust solutions and leading our development team to
+            excellence.
+          </p>
+        </div>
+
+        <!-- Team Member 3 -->
+        <div
+          style="
+            background: linear-gradient(145deg, #0a0a0a, #1a1a1a);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+          "
+          onmouseover="this.style.transform='translateY(-10px) rotate(2deg)'; this.style.boxShadow='0 25px 50px rgba(0,0,0,0.8)'"
+          onmouseout="this.style.transform='translateY(0) rotate(0deg)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.5)'"
+        >
+          <div
+            style="
+              width: 120px;
+              height: 120px;
+              border-radius: 50%;
+              overflow: hidden;
+              margin: 0 auto 1.5rem;
+              border: 3px solid transparent;
+              background: linear-gradient(45deg, #f093fb, #f5576c);
+              padding: 3px;
+            "
+          >
+            <img
+              src="{% static 'img/interstellar.jpg' %}"
+              alt="UX Strategist"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 50%;
+              "
+            />
+          </div>
+          <h4
+            style="
+              color: #ffffff;
+              font-weight: 700;
+              margin-bottom: 0.5rem;
+              font-size: 1.3rem;
+            "
+          >
+            Marcus Rodriguez
+          </h4>
+          <p
+            style="
+              color: #f093fb;
+              font-size: 1rem;
+              font-weight: 600;
+              margin-bottom: 1rem;
+            "
+          >
+            UX Strategist
+          </p>
+          <p style="color: #aaaaaa; font-size: 0.9rem; line-height: 1.6">
+            Crafting user experiences that are both intuitive and delightful.
+          </p>
+        </div>
       </div>
     </div>
   </section>
 </main>
+
+<style>
+  @keyframes floatIcon {
+    0%,
+    100% {
+      transform: translateY(0px) rotate(0deg);
+      opacity: 0.3;
+    }
+    50% {
+      transform: translateY(-20px) rotate(180deg);
+      opacity: 0.6;
+    }
+  }
+</style>
 {% endblock content %}
