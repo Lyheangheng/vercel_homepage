@@ -1,16 +1,98 @@
 {% extends "base.html" %}
 {% block title %}Home{% endblock title %}
-
 {% block content %}
-
-    <!-- Main Content -->
-    <main>
-        <!-- Home Page -->
-        <div class="page-content active">
-            <h1>Welcome Home</h1>
-            <p>This is the home page of our modern, aesthetic website. The navigation bar features a beautiful glassmorphism design with smooth hover effects and animations.</p>
-            <p>Our brand "Velocity" represents speed, innovation, and forward-thinking design. The lightning bolt icon symbolizes energy and rapid progress.</p>
-            <p>Navigate through the different pages using the elegant navbar above, or use the search functionality to find what you're looking for.</p>
-        </div>
-    </main>
+<main>
+  <section class="text-center py-5" style="background: linear-gradient(90deg, #181818 60%, #e50914 100%); border-radius: 16px; box-shadow: 0 4px 32px #000a; margin-bottom: 2.5rem;">
+    <h1 style="font-size: 3rem; font-weight: 900; color: #fff; text-shadow: 0 2px 12px #e50914;">Welcome to ModernSite</h1>
+    <p style="font-size: 1.3rem; color: #fff; margin: 1.5rem 0;">Enjoy unlimited movies, TV shows, and more.</p>
+    <a href="#" class="btn btn-danger btn-lg" style="background: #e50914; border: none; font-weight: bold; font-size: 1.2rem;">Get Started</a>
+  </section>
+  <section style="margin-bottom: 2.5rem;">
+    <h2 style="color: #fff; font-weight: 700; margin-bottom: 1rem;">Trending</h2>
+    <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; padding-bottom: 1rem;">
+      <!-- Trending Movie Card 1 -->
+      <div style="min-width: 220px; background: #232323; border-radius: 12px; box-shadow: 0 2px 12px #000a; padding: 1rem; text-align: center; transition: transform 0.2s; cursor: pointer;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        <img src="static/img/batman.jpg" alt="Movie Poster" style="width: 100%; border-radius: 8px; margin-bottom: 0.7rem;">
+        <h5 style="color: #fff; font-weight: 600;">Batman</h5>
+        <span style="color: #e50914; font-size: 0.95rem;">Trending</span>
+      </div>
+      <!-- Trending Movie Card 2 -->
+      <div style="min-width: 220px; background: #232323; border-radius: 12px; box-shadow: 0 2px 12px #000a; padding: 1rem; text-align: center; transition: transform 0.2s; cursor: pointer;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        <img src="static/img/movie2.jpg" alt="Movie Poster" style="width: 100%; border-radius: 8px; margin-bottom: 0.7rem;">
+        <h5 style="color: #fff; font-weight: 600;">Movie 2</h5>
+        <span style="color: #e50914; font-size: 0.95rem;">Trending</span>
+      </div>
+      <!-- Trending Movie Card 3 -->
+      <div style="min-width: 220px; background: #232323; border-radius: 12px; box-shadow: 0 2px 12px #000a; padding: 1rem; text-align: center; transition: transform 0.2s; cursor: pointer;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        <img src="static/img/movie3.jpg" alt="Movie Poster" style="width: 100%; border-radius: 8px; margin-bottom: 0.7rem;">
+        <h5 style="color: #fff; font-weight: 600;">Movie 3</h5>
+        <span style="color: #e50914; font-size: 0.95rem;">Trending</span>
+      </div>
+      <!-- Trending Movie Card 4 -->
+      <div style="min-width: 220px; background: #232323; border-radius: 12px; box-shadow: 0 2px 12px #000a; padding: 1rem; text-align: center; transition: transform 0.2s; cursor: pointer;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        <img src="static/img/movie4.jpg" alt="Movie Poster" style="width: 100%; border-radius: 8px; margin-bottom: 0.7rem;">
+        <h5 style="color: #fff; font-weight: 600;">Movie 4</h5>
+        <span style="color: #e50914; font-size: 0.95rem;">Trending</span>
+      </div>
+      <!-- Trending Movie Card 5 -->
+      <div style="min-width: 220px; background: #232323; border-radius: 12px; box-shadow: 0 2px 12px #000a; padding: 1rem; text-align: center; transition: transform 0.2s; cursor: pointer;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        <img src="static/img/movie5.jpg" alt="Movie Poster" style="width: 100%; border-radius: 8px; margin-bottom: 0.7rem;">
+        <h5 style="color: #fff; font-weight: 600;">Movie 5</h5>
+        <span style="color: #e50914; font-size: 0.95rem;">Trending</span>
+      </div>
+      <!-- Trending Movie Card 6 -->
+      <div style="min-width: 220px; background: #232323; border-radius: 12px; box-shadow: 0 2px 12px #000a; padding: 1rem; text-align: center; transition: transform 0.2s; cursor: pointer;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        <img src="static/img/movie6.jpg" alt="Movie Poster" style="width: 100%; border-radius: 8px; margin-bottom: 0.7rem;">
+        <h5 style="color: #fff; font-weight: 600;">Movie 6</h5>
+        <span style="color: #e50914; font-size: 0.95rem;">Trending</span>
+      </div>
+    </div>
+  </section>
+  <section style="margin-bottom: 2.5rem;">
+    <h2 style="color: #fff; font-weight: 700; margin-bottom: 1rem;">Browse by Category</h2>
+    <div style="display: flex; flex-wrap: wrap; gap: 1.5rem;">
+      <div style="flex: 1 1 220px; background: #232323; border-radius: 12px; box-shadow: 0 2px 12px #000a; padding: 1.5rem; text-align: center; min-width: 220px; transition: box-shadow 0.2s;" onmouseover="this.style.boxShadow='0 4px 24px #e5091444'" onmouseout="this.style.boxShadow='0 2px 12px #000a'">
+        <i class="bi bi-film" style="font-size: 2.5rem; color: #e50914;"></i>
+        <h5 style="color: #fff; font-weight: 600; margin-top: 1rem;">Action</h5>
+        <p style="color: #bbb; font-size: 1rem;">Explore the best Action movies and shows.</p>
+        <a href="#" class="btn btn-outline-danger btn-sm" style="border-radius: 20px;">View More</a>
+      </div>
+      <div style="flex: 1 1 220px; background: #232323; border-radius: 12px; box-shadow: 0 2px 12px #000a; padding: 1.5rem; text-align: center; min-width: 220px; transition: box-shadow 0.2s;" onmouseover="this.style.boxShadow='0 4px 24px #e5091444'" onmouseout="this.style.boxShadow='0 2px 12px #000a'">
+        <i class="bi bi-film" style="font-size: 2.5rem; color: #e50914;"></i>
+        <h5 style="color: #fff; font-weight: 600; margin-top: 1rem;">Comedy</h5>
+        <p style="color: #bbb; font-size: 1rem;">Explore the best Comedy movies and shows.</p>
+        <a href="#" class="btn btn-outline-danger btn-sm" style="border-radius: 20px;">View More</a>
+      </div>
+      <div style="flex: 1 1 220px; background: #232323; border-radius: 12px; box-shadow: 0 2px 12px #000a; padding: 1.5rem; text-align: center; min-width: 220px; transition: box-shadow 0.2s;" onmouseover="this.style.boxShadow='0 4px 24px #e5091444'" onmouseout="this.style.boxShadow='0 2px 12px #000a'">
+        <i class="bi bi-film" style="font-size: 2.5rem; color: #e50914;"></i>
+        <h5 style="color: #fff; font-weight: 600; margin-top: 1rem;">Drama</h5>
+        <p style="color: #bbb; font-size: 1rem;">Explore the best Drama movies and shows.</p>
+        <a href="#" class="btn btn-outline-danger btn-sm" style="border-radius: 20px;">View More</a>
+      </div>
+      <div style="flex: 1 1 220px; background: #232323; border-radius: 12px; box-shadow: 0 2px 12px #000a; padding: 1.5rem; text-align: center; min-width: 220px; transition: box-shadow 0.2s;" onmouseover="this.style.boxShadow='0 4px 24px #e5091444'" onmouseout="this.style.boxShadow='0 2px 12px #000a'">
+        <i class="bi bi-film" style="font-size: 2.5rem; color: #e50914;"></i>
+        <h5 style="color: #fff; font-weight: 600; margin-top: 1rem;">Horror</h5>
+        <p style="color: #bbb; font-size: 1rem;">Explore the best Horror movies and shows.</p>
+        <a href="#" class="btn btn-outline-danger btn-sm" style="border-radius: 20px;">View More</a>
+      </div>
+      <div style="flex: 1 1 220px; background: #232323; border-radius: 12px; box-shadow: 0 2px 12px #000a; padding: 1.5rem; text-align: center; min-width: 220px; transition: box-shadow 0.2s;" onmouseover="this.style.boxShadow='0 4px 24px #e5091444'" onmouseout="this.style.boxShadow='0 2px 12px #000a'">
+        <i class="bi bi-film" style="font-size: 2.5rem; color: #e50914;"></i>
+        <h5 style="color: #fff; font-weight: 600; margin-top: 1rem;">Sci-Fi</h5>
+        <p style="color: #bbb; font-size: 1rem;">Explore the best Sci-Fi movies and shows.</p>
+        <a href="#" class="btn btn-outline-danger btn-sm" style="border-radius: 20px;">View More</a>
+      </div>
+      <div style="flex: 1 1 220px; background: #232323; border-radius: 12px; box-shadow: 0 2px 12px #000a; padding: 1.5rem; text-align: center; min-width: 220px; transition: box-shadow 0.2s;" onmouseover="this.style.boxShadow='0 4px 24px #e5091444'" onmouseout="this.style.boxShadow='0 2px 12px #000a'">
+        <i class="bi bi-film" style="font-size: 2.5rem; color: #e50914;"></i>
+        <h5 style="color: #fff; font-weight: 600; margin-top: 1rem;">Documentary</h5>
+        <p style="color: #bbb; font-size: 1rem;">Explore the best Documentary movies and shows.</p>
+        <a href="#" class="btn btn-outline-danger btn-sm" style="border-radius: 20px;">View More</a>
+      </div>
+    </div>
+  </section>
+  <section style="background: #e50914; border-radius: 12px; padding: 2rem; text-align: center; box-shadow: 0 2px 12px #000a;">
+    <h2 style="color: #fff; font-weight: 800; margin-bottom: 1rem;">Ready to watch?</h2>
+    <p style="color: #fff; font-size: 1.2rem; margin-bottom: 1.5rem;">Sign up now and start your free month.</p>
+    <a href="#" class="btn btn-light btn-lg" style="color: #e50914; font-weight: bold; font-size: 1.1rem;">Join Now</a>
+  </section>
+</main>
 {% endblock content %}

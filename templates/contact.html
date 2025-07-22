@@ -1,16 +1,22 @@
 {% extends "base.html" %}
 {% block title %}Contact{% endblock title %}
-
 {% block content %}
-
-    <!-- Main Content -->
-    <main>
-        <!-- Home Page -->
-        <div class="page-content active">
-            <h1>Welcome Home</h1>
-            <p>This is the home page of our modern, aesthetic website. The navigation bar features a beautiful glassmorphism design with smooth hover effects and animations.</p>
-            <p>Our brand "Velocity" represents speed, innovation, and forward-thinking design. The lightning bolt icon symbolizes energy and rapid progress.</p>
-            {% comment %} <p>Navigate through the different pages using the elegant navbar above, or use the search functionality to find what you're looking for.</p> {% endcomment %}
-        </div>
-    </main>
+<main class="py-5">
+  <section class="text-center" style="max-width: 700px; margin: auto;">
+    <h1 style="color: #e50914; font-weight: 900;">Contact Us</h1>
+    <p style="color: #bbb; font-size: 1.2rem; margin: 2rem 0;">Have questions or feedback? Reach out to us using the form below. We value your input and will get back to you as soon as possible.</p>
+    <form class="p-4 rounded" style="background: #232323; box-shadow: 0 2px 12px #000a;">
+      <div class="mb-3">
+        <input type="text" class="form-control" placeholder="Your Name" style="background:#181818; color:#fff; border:1px solid #333;">
+      </div>
+      <div class="mb-3">
+        <input type="email" class="form-control" placeholder="Your Email" style="background:#181818; color:#fff; border:1px solid #333;">
+      </div>
+      <div class="mb-3">
+        <textarea class="form-control" rows="4" placeholder="Your Message" style="background:#181818; color:#fff; border:1px solid #333;"></textarea>
+      </div>
+      <button type="submit" class="btn btn-danger" style="background:#e50914; border:none;">Send Message</button>
+    </form>
+  </section>
+</main>
 {% endblock content %}

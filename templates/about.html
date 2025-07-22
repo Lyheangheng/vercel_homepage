@@ -1,16 +1,24 @@
 {% extends "base.html" %}
 {% block title %}About{% endblock title %}
-
 {% block content %}
-
-    <!-- Main Content -->
-    <main>
-        <!-- Home Page -->
-        <div>
-            <h1>Welcome Home</h1>
-            <p>This is the home page of our modern, aesthetic website. The navigation bar features a beautiful glassmorphism design with smooth hover effects and animations.</p>
-            {% comment %} <p>Our brand "Velocity" represents speed, innovation, and forward-thinking design. The lightning bolt icon symbolizes energy and rapid progress.</p>
-            <p>Navigate through the different pages using the elegant navbar above, or use the search functionality to find what you're looking for.</p> {% endcomment %}
-        </div>
-    </main>
-{% endblock%}
+<main class="py-5">
+  <section class="text-center" style="max-width: 700px; margin: auto;">
+    <h1 style="color: #e50914; font-weight: 900;">About ModernSite</h1>
+    <p style="color: #bbb; font-size: 1.2rem; margin: 2rem 0;">ModernSite is a demo web application inspired by Netflix, built to showcase modern UI, interactive features, and a clean dark theme. It uses Django, Bootstrap, and custom styles for a beautiful experience.</p>
+    <div class="d-flex justify-content-center gap-4 mt-4">
+      <div>
+        <i class="bi bi-lightning" style="font-size: 2.5rem; color: #e50914;"></i>
+        <p style="color: #fff;">Fast & Responsive</p>
+      </div>
+      <div>
+        <i class="bi bi-palette" style="font-size: 2.5rem; color: #e50914;"></i>
+        <p style="color: #fff;">Modern Design</p>
+      </div>
+      <div>
+        <i class="bi bi-people" style="font-size: 2.5rem; color: #e50914;"></i>
+        <p style="color: #fff;">User Friendly</p>
+      </div>
+    </div>
+  </section>
+</main>
+{% endblock content %}
