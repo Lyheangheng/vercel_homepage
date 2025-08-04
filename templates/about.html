@@ -13,7 +13,7 @@
   "
 >
   <!-- Floating Icons Animation -->
-  <div>
+  {% comment %} <div>
     style="
       position: absolute;
       top: 0;
@@ -23,7 +23,7 @@
       pointer-events: none;
       z-index: 1;
     "
-  >
+  </div> {% endcomment %}
     <i
       class="bi bi-code-slash"
       style="
@@ -148,7 +148,7 @@
         onmouseout="this.style.transform='scale(1) rotate(0deg)'; this.style.boxShadow='none'"
       >
         <img
-          src="{% static 'img/will_smith.jpg' %}"
+          src= "static/img/will_smith.jpg"
           alt="Studio Profile"
           style="
             width: 100%;

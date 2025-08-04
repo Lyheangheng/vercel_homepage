@@ -11,3 +11,6 @@ def contact(request):
 
 def home(request):
     return render(request, 'index.html')
+
+def forPage(request):
+    return render(request, 'for.html')
