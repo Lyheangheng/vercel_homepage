@@ -25,4 +25,5 @@ urlpatterns = [
     path('about/', views.about, name='about'),
     path('contact/', views.contact, name='contact'),
     path('for_Page/', views.forPage, name='for_Page'),
+    path('multiplication_table/', views.multiplication_table, name='multiplication_table'),
 ]

@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block title %}Multiplication Table{% endblock %}
+{% block content %}
+<div class="card" style="margin: 20px; border-radius: 10px; margin-top: 20px;">
+  <div class="card-header">
+    <form method="post" action="">
+      {% csrf_token %}
+      <div class="mb-3" style="margin-left: 20px">
+        <label for="numberInput" class="form-label">Enter a number</label>
+        <input
+          type="number"
+          class="form-control"
+          id="numberInput"
+          name="number"
+          value="{{ number }}"
+          min="1"
+        />
+      </div>
+      <button type="submit" class="btn btn-primary">Show Table</button>
+    </form>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">{{ message }}</div>
+  <div>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>numberInput</th>
+          <th>Result</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for i, result in table %}
+        <tr>
+          <td>{{ forloop.counter }}</td>
+          <td>{{ number }} × {{ i }}</td>
+          <td>{{ result }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}

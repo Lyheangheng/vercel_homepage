@@ -210,6 +210,9 @@
             <a class="nav-link" href="{% url 'for_Page' %}">For Page</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="{% url 'multiplication_table' %}">Multiplication Table</a>
+          </li>
+          <li class="nav-item">
             <form class="search-form" method="GET" action="/search/">
               <input class="search-box" type="text" name="q" placeholder="Search projects...">
               <button class="btn-search" type="submit">
@@ -227,7 +230,7 @@
     {% endblock %}
   </div>
 
-  <footer class="footer">
+  <footer class="footer" style="margin-bottom: 20px;">
     <div class="container">
       <p>&copy; 2025 Creative Portfolio. Made with <span style="color:#667eea">&#10084;</span> | 
          <a href="{% url 'about' %}">About</a> | 

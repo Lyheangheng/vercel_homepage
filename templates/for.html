@@ -1,36 +1,60 @@
-{% extends "base.html" %}
-{% block title %}For Page{% endblock %}
+{% extends "base.html" %} 
+{% block title %}For Page{% endblock %} 
 {% block content %}
 
-
-<div class="card" style="">
+<div class="card" style="margin: 20px; margin-bottom: 10px; border-radius: 10px; margin-top: 20px;">
   <div class="card-header">
-    Featured
+    <form method = "post" action="{% url 'for_Page' %}" >
+        {% csrf_token %}
+      <div class="mb-3" style="margin-left: 20px">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input
+          type="number"
+          class="form-control"
+          id="count"
+          aria-describedby="emailHelp"
+          name="count"
+        />
+        <div id="emailHelp" class="form-text">
+          We'll never share your email with anyone else.
+        </div>
+      </div>
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+        <label class="form-check-label" for="exampleCheck1">Confirm </label>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
   </div>
-  <div>
-    <table class="table table-striped">
-  <table class="table">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    {% for i in count %}
-    <tr>
-      <th scope="row">{{ forloop.counter }}</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    {% endfor %}
-  </tbody>
-</table>
-</table>
   </div>
-</div>
 
-{% endblock content %}
+  <div class="card" style="">
+    <div class="card-header">{{ message}}</div>
+    <div>
+      <table class="table table-striped">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">numberInput</th>
+              <th scope="col">Last</th>
+              <th scope="col">Handle</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for i in count %}
+            <tr>
+              <th scope="row">{{ forloop.counter }}</th>
+              <td>{{ i }}</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </table>
+    </div>
+  </div>
+
+  {% endblock content %}
+</div>
