@@ -30,17 +30,28 @@ def forPage(request):
     return render(request, "for.html", context)
 
 def multiplication_table(request):
-    context = {}
-    context["message"] = "Django Multiplication Table"
+    user_number = 1  
+    
+    if request.method == "POST":
+        if request.POST.get("number"):
+            user_number = int(request.POST.get("number"))
+    
 
-    if request.method == "POST" and request.POST.get("number"):
-        number = int(request.POST.get("number"))
-    else:
-        number = 1
+    table_rows = []
+    
 
-    table = [(i, number * i) for i in range(1, number + 1)]
-    context["number"] = number
-    context["table"] = table
-
+    for multiplier in range(1, 11):  
+        result = user_number * multiplier
+        table_rows.append({
+            'multiplier': multiplier,
+            'user_number': user_number, 
+            'result': result
+        })
+    
+    context = {
+        'message': 'Multiplication Table',
+        'user_number': user_number,
+        'table_rows': table_rows
+    }
     return render(request, "multiplication_table.html", context)
 from django.shortcuts import render

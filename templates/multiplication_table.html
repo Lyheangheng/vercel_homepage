@@ -33,13 +33,13 @@
         </tr>
       </thead>
       <tbody>
-        {% for i, result in table %}
-        <tr>
-          <td>{{ forloop.counter }}</td>
-          <td>{{ number }} × {{ i }}</td>
-          <td>{{ result }}</td>
-        </tr>
-        {% endfor %}
+             {% for row in table_rows %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ row.user_number }} × {{ row.multiplier }}</td>
+                <td>{{ row.result }}</td>
+            </tr>
+            {% endfor %}
       </tbody>
     </table>
   </div>
